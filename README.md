@@ -1,103 +1,46 @@
-# 
-
-
-
-# Monitoramento Inteligente de Consumo Energético
-
-Projeto desenvolvido na disciplina **Projeto Aplicado IV** com o objetivo de analisar e prever o consumo de energia elétrica no Brasil utilizando técnicas de séries temporais.
+# **MONITORAMENTO INTELIGENTE DE CONSUMO:**
+REDUZINDO O DESPERDÍCIO NA INDÚSTRIA BRASILEIRA ATRAVÉS DE MODELAGEM PREDITIVA
 
 ---
 
 ## Objetivo
 
-Este projeto tem como objetivo identificar padrões de consumo energético e desenvolver um modelo preditivo capaz de antecipar o comportamento da demanda, contribuindo para a **redução de desperdícios energéticos** e apoio à tomada de decisão.
+Analisar o comportamento do consumo energético ao longo do tempo e desenvolver um modelo preditivo para apoiar a compreensão da demanda.
 
 ---
 
-## Base de Dados
+## Dados
 
-Os dados utilizados foram obtidos de fontes oficiais do setor elétrico brasileiro:
-
-- ONS (Operador Nacional do Sistema Elétrico)
-- CCEE (Câmara de Comercialização de Energia Elétrica)
-
-A base contém:
+Base de dados com informações de consumo energético contendo:
 
 - Data e hora (`din_instante`)
 - Subsistema (`nom_subsistema`)
-- Consumo de energia (`val_cargaenergiamwmed`)
+- Consumo (`val_cargaenergiamwmed`)
 
 ---
 
-## Pipeline do Projeto
+## Análise Exploratória
 
-O projeto foi estruturado seguindo as etapas abaixo:
+Foram realizadas análises para identificar:
 
-1. Coleta de Dados  
-2. Pré-processamento  
-3. Análise Exploratória (EDA)  
-4. Análise de Séries Temporais (ACF, PACF, decomposição)  
-5. Modelagem Preditiva (ARIMA)  
-6. Avaliação dos Modelos  
-7. Geração de Insights  
+- Tendência ao longo do tempo  
+- Sazonalidade no consumo  
+- Variabilidade dos dados  
+- Dependência temporal (ACF e PACF)  
 
----
-
-## Análise Exploratória (EDA)
-
-Durante a análise exploratória, foram identificados:
-
-- Tendência ao longo do ano  
-- Forte sazonalidade diária  
-- Alta variabilidade nos dados  
-- Dependência temporal (ACF/PACF)  
-
-A decomposição da série evidenciou:
-
-- Tendência não linear  
-- Componente sazonal forte  
-- Resíduo aleatório  
-
----
-
-## Análise por Subsistema
-
-A segmentação por região revelou diferenças relevantes:
-
-- Sudeste/Centro-Oeste → maior consumo  
-- Sul → comportamento semelhante, menor escala  
-- Nordeste → mais estável  
-- Norte → menor consumo  
-
-Essa análise destaca a importância de considerar **características regionais** na modelagem.
+Também foi feita uma análise por subsistema, mostrando diferenças entre as regiões do país.
 
 ---
 
 ## Modelo Base
 
-Foi implementado um modelo **ARIMA (2,1,2)** para previsão da série temporal.
+Foi aplicado um modelo ARIMA para previsão da série temporal.
 
-### Metodologia:
-
-- Divisão treino/teste (80/20)  
-- Treinamento do modelo  
+- Divisão treino/teste  
 - Geração de previsões  
+- Avaliação com MAE e RMSE  
 
-## Insights
-
-- O consumo energético apresenta forte padrão cíclico  
-- Há diferenças relevantes entre regiões  
-- Modelos preditivos podem apoiar estratégias de eficiência energética  
-- Possível aplicação em monitoramento industrial e redução de desperdícios  
-
----
-
-## Próximos Passos
-
-- Implementação de modelo **SARIMA**  
-- Uso de variáveis exógenas (ex: clima)  
-- Teste com modelos de Machine Learning  
-- Otimização de parâmetros  
+O modelo conseguiu capturar o comportamento geral da série, com limitações em variações mais complexas.
 
 ---
 
