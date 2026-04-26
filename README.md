@@ -83,15 +83,6 @@ Foi implementado um modelo **ARIMA (2,1,2)** para previsão da série temporal.
 - Treinamento do modelo  
 - Geração de previsões  
 
-### Resultados:
-
-- MAE: ~1285  
-- RMSE: ~1481  
-
-O modelo demonstrou capacidade de capturar o comportamento geral da série, embora apresente limitações na modelagem de padrões sazonais mais complexos.
-
----
-
 ## Insights
 
 - O consumo energético apresenta forte padrão cíclico  
@@ -107,16 +98,6 @@ O modelo demonstrou capacidade de capturar o comportamento geral da série, embo
 - Uso de variáveis exógenas (ex: clima)  
 - Teste com modelos de Machine Learning  
 - Otimização de parâmetros  
-
----
-
-## Tecnologias Utilizadas
-
-- Python  
-- Pandas  
-- Matplotlib  
-- Statsmodels  
-- Scikit-learn  
 
 ---
 
