@@ -1,52 +1,113 @@
-# **MONITORAMENTO INTELIGENTE DE CONSUMO:**
-REDUZINDO O DESPERDÍCIO NA INDÚSTRIA BRASILEIRA ATRAVÉS DE MODELAGEM PREDITIVA
+# Monitoramento Inteligente de Consumo
 
----
+Projeto desenvolvido na disciplina de Projeto Aplicado IV com foco na análise e previsão do consumo energético brasileiro utilizando técnicas de séries temporais.
 
 ## Objetivo
 
-Analisar o comportamento do consumo energético ao longo do tempo e desenvolver um modelo preditivo para apoiar a compreensão da demanda.
+Desenvolver um modelo preditivo capaz de analisar padrões de consumo energético no Brasil, auxiliando no monitoramento inteligente e na redução de desperdícios.
 
 ---
 
-## Dados
+## Base de Dados
 
-Base de dados com informações de consumo energético contendo:
+Base pública de carga energética do Brasil disponibilizada por:
 
-- Data e hora (`din_instante`)
-- Subsistema (`nom_subsistema`)
-- Consumo (`val_cargaenergiamwmed`)
+* ONS (Operador Nacional do Sistema)
+* CCEE (Câmara de Comercialização de Energia Elétrica)
 
----
+### Variáveis utilizadas
 
-## Análise Exploratória
+* Data e hora
+* Subsistema
+* Consumo energético (MW)
 
-Foram realizadas análises para identificar:
+### Período analisado
 
-- Tendência ao longo do tempo  
-- Sazonalidade no consumo  
-- Variabilidade dos dados  
-- Dependência temporal (ACF e PACF)  
-
-Também foi feita uma análise por subsistema, mostrando diferenças entre as regiões do país.
+* Ano de 2025
+* Granularidade horária
 
 ---
 
-## Modelo Base
+## Etapas do Projeto
 
-Foi aplicado um modelo ARIMA para previsão da série temporal.
+### 1. Pré-processamento
 
-- Divisão treino/teste  
-- Geração de previsões  
-- Avaliação com MAE e RMSE  
+* Conversão de datas
+* Organização temporal
+* Limpeza e preparação dos dados
 
-O modelo conseguiu capturar o comportamento geral da série, com limitações em variações mais complexas.
+### 2. Análise Exploratória
+
+* Consumo médio diário
+* Identificação de sazonalidade
+* Análise por subsistema
+* Estatísticas descritivas
+
+### 3. Decomposição da Série Temporal
+
+* Tendência
+* Sazonalidade
+* Resíduos
+
+### 4. Modelagem Preditiva
+
+Modelos implementados:
+
+* ARIMA
+* SARIMA
+
+### 5. Avaliação dos Modelos
+
+Métricas utilizadas:
+
+* MAE
+* RMSE
+
+Resultados obtidos:
+
+| Modelo | MAE     | RMSE    |
+| ------ | ------- | ------- |
+| ARIMA  | 1285.40 | 1481.55 |
+| SARIMA | 3654.56 | 4151.70 |
+
+O modelo ARIMA apresentou melhor desempenho para a série analisada.
+
+---
+
+## Tecnologias Utilizadas
+
+* Python
+* Pandas
+* Matplotlib
+* Statsmodels
+* Jupyter Notebook
+
+---
+
+## Estrutura do Repositório
+
+```bash
+📁 notebooks
+📁 dados
+📁 apresentacao
+📄 README.md
+```
 
 ---
 
 ## Integrantes
 
-- Felipe Graciano de Moura Ramos  
-- João Pedro Rocha Abbade  
-- Marcos Davi Duarte Abibe  
-- Thais Jorge Azevedo  
+* Felipe Graciano de Moura Ramos
+* João Pedro Rocha Abbade
+* Marcos Davi Duarte Abibe
+* Thais Jorge Azevedo
+
+---
+
+## Trabalhos Futuros
+
+* Inclusão de variáveis meteorológicas
+* Teste com modelos de machine learning
+* Dashboard em tempo real
+* Expansão da base histórica
+
