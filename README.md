@@ -92,6 +92,10 @@ O modelo ARIMA apresentou melhor desempenho para a série analisada.
 📁 apresentacao
 📄 README.md
 ```
+---
+
+## Apresetação
+https://youtu.be/jCawjIumK1M
 
 ---
 
